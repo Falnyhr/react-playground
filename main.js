@@ -78,3 +78,5 @@ const FlavorForm = (props) => {
         </form>
     );
   }
+
+  ReactDOM.render(<NameForm />, <EssayForm />, <FlavorForm />, document.querySelector('#app'));
