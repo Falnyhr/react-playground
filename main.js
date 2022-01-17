@@ -26,11 +26,11 @@ const NameForm = (props) => {
 //-------------------------------------------------
 const EssayForm = (props) => {
 
-    const [value, setValue] = React.useState('Écrivez un essai à propos de votre élément du DOM préféré');
+    const [value, setText] = React.useState('Écrivez un essai à propos de votre élément du DOM préféré');
   
     const handleChange = (e) => {
         e.preventDefault();
-        setValue(e.target.value);
+        setText(e.target.value);
     }
   
     const handleSubmit = (e) => {
@@ -79,4 +79,38 @@ const FlavorForm = (props) => {
     );
   }
 
-  ReactDOM.render(<NameForm />, <EssayForm />, <FlavorForm />, document.querySelector('#app'));
+//-------------------------------------------------
+const MultiForm = (props) => {
+    
+    const [inputs, setInputs] = React.useState({
+        name: '',
+        text: '',
+        value: 'coconut'
+    });
+
+    return(
+        <form onSubmit={handleSubmit}>
+            <label>
+                Nom :
+                <input type="text" value={inputs.name} onChange={handleChange} />
+            </label>
+            <label>
+                Essay:
+                <textarea value={inputs.text} onChange={handleChange} />
+            </label>
+            <label>
+                Choisissez votre parfum favori :
+                <select value={inputs.value} onChange={handleChange}>
+                    <option value="grapefruit">Pamplemousse</option>
+                    <option value="lime">Citron vert</option>
+                    <option value="coconut">Noix de coco</option>
+                    <option value="mango">Mangue</option>
+                </select>
+            </label>
+            <input type="submit" value="Envoyer" />
+        </form>
+    );
+}
+
+
+  ReactDOM.render(<MultiForm />, document.querySelector('#app'));
