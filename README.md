@@ -4,12 +4,11 @@
 
 # Bienvenue sur ce module d'apprentissage pour React.
 
-
 ## Qu'est ce que React ?
 
 Si on suit la documentation de cette librairie, react est "une bibliothèque JavaScript pour la construction d’interfaces utilisateur (UI)."
 
-Cette définition veut tout dire et rien dire en même temps. La question qu'il faut vraiment se poser c'est : `"Pourquoi utiliser React?"`. 
+Cette définition veut tout dire et rien dire en même temps. La question qu'il faut vraiment se poser c'est : `"Pourquoi utiliser React?"`.
 
 La librairie permet de régler une problématique rencontrée quand on doit synchroniser notre état d'application et notre vue (l'interface) dans une application JS from scratch.
 
@@ -19,13 +18,13 @@ La librairie permet de régler une problématique rencontrée quand on doit sync
 - utiliser VSCode.
 
 optionnel :
+
 - installer l'extension Live Server (pour VSCode).
-
-
+- installer l'extension es7 React Redux.
 
 ## Comment utiliser ce repository
 
-Chaque exercice est sur une branche séparée. 
+Chaque exercice est sur une branche séparée.
 A partir de l'exercice 2, vous obtenez la correction des exercices précédents.
 
 > *Exemple:  La correction de l'exercice 3 se situe sur la branche exo4*
@@ -41,8 +40,4 @@ Ce module a une approche orientée sur documentation. Et ce afin de vous habitue
 ## Pour commencer
 
 - Clonez ce repo avec la commande `git clone https://github.com/r0ulito/react-playground.git`
-
 - Placez sur la branche exo1 avec la commande `git checkout exo1`
-
-
-
