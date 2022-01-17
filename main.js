@@ -88,27 +88,30 @@ const MultiForm = (props) => {
         value: 'coconut'
     });
     
-    const handleChange = (e) => {
-        
+    const handleChange = ({target: {name, value}}) => {
+        setInputs(state => ({...state, [name]: value}), [])
     }
     
     const handleSubmit = (e) => {
-
+        e.preventDefault();
+        for(const name in inputs){
+            console.log(`${name}: ${inputs[name]}`);
+        }
     }
 
     return(
         <form onSubmit={handleSubmit}>
             <label>
                 Nom :
-                <input type="text" value={inputs.name} onChange={handleChange} />
+                <input type="text" name="name" value={inputs.name} onChange={handleChange} />
             </label>
             <label>
                 Essay:
-                <textarea value={inputs.text} onChange={handleChange} />
+                <textarea name="text" value={inputs.text} onChange={handleChange} />
             </label>
             <label>
                 Choisissez votre parfum favori :
-                <select value={inputs.value} onChange={handleChange}>
+                <select name="value" value={inputs.value} onChange={handleChange}>
                     <option value="grapefruit">Pamplemousse</option>
                     <option value="lime">Citron vert</option>
                     <option value="coconut">Noix de coco</option>
