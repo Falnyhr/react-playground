@@ -87,6 +87,14 @@ const MultiForm = (props) => {
         text: '',
         value: 'coconut'
     });
+    
+    const handleChange = (e) => {
+        
+    }
+    
+    const handleSubmit = (e) => {
+
+    }
 
     return(
         <form onSubmit={handleSubmit}>
